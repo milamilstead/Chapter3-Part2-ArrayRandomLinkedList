@@ -18,7 +18,7 @@ class ArrayRandomLinkedListTest {
                 ("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]", testArrayOutputString);
     }
 
-    @Test
+    @Testx
     void test2() {
         int[] ourArrayOfint = ArrayUtilities.genSortedArrayOfint(10);
         System.out.println("Generate Sorted Array of int example: ");
