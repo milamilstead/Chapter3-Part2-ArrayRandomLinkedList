@@ -22,41 +22,45 @@ public class TestDoublyLinkedListsBook {
         // Create the linked list, call it myDoublyLinkedList
         // Use book interface
         DoublyLinkedList<PortfolioHolding> myDoublyLinkedList = new DoublyLinkedList<>();
-        // TODO: add first two items to the front of list
+        myDoublyLinkedList.addFirst(item1);
+        myDoublyLinkedList.addFirst(item2);
         // First add item1 then add item2
 
-        // TODO: Next add item3, item4, and item5 to the back
+        myDoublyLinkedList.addLast(item3);
+        myDoublyLinkedList.addLast(item4);
+        myDoublyLinkedList.addLast(item5);
         // of the list in that order
 
-        // TODO: Now get the first element in the list
+        myDoublyLinkedList.first();
         // Don't remove it
         // Call the variable firstItem
 
         // TODO: Uncomment the below to see the first item
-        //PortfolioHolding firstItem = myDoublyLinkedList.first();
-        //String firstItemString = firstItem.toString();
-        //System.out.println("First: ");
-        //System.out.println(firstItemString);
-        // TODO Now get the last element in the list
+        PortfolioHolding firstItem = myDoublyLinkedList.first();
+        String firstItemString = firstItem.toString();
+        System.out.println("First: ");
+        System.out.println(firstItemString);
+        myDoublyLinkedList.last();
         // It won't be removed
 
         // TODO: Uncomment the below to see the last item
-        // Convert it to a string
-        //String lastItemString = lastItem.toString();
-        //System.out.println("Last: ");
-        //System.out.println(lastItemString);
+        //Convert it to a string
+        PortfolioHolding lastItem = myDoublyLinkedList.last();
+        String lastItemString = lastItem.toString();
+        System.out.println("Last: ");
+        System.out.println(lastItemString);
         // Now let's remove all elements from the list
         // And package into a string to see our portfolio
         StringBuilder sb = new StringBuilder();
         while (!myDoublyLinkedList.isEmpty()) {
-            // TODO: put in logic here to remove first element
+            PortfolioHolding thisHolding = myDoublyLinkedList.removeFirst();
             // And enter it into thisHolding
 
             // TODO: uncomment the below lines to build the string
-            //sb.append(thisHolding.toString());
-            //if (!myDoublyLinkedList.isEmpty()) {
-            //    sb.append("\n");
-            //}
+            sb.append(thisHolding.toString());
+            if (!myDoublyLinkedList.isEmpty()) {
+                sb.append("\n");
+            }
         }
         String returnString = sb.toString();
         return returnString;

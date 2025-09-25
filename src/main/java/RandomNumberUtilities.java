@@ -13,8 +13,7 @@ public class RandomNumberUtilities {
     // Random class)
     public static int genRandomIntInclusive(int lower, int upper, Random random) {
         int randomIntLowertoUpper = 52;
-        // TODO: generate a random number between lower and upper inclusive
-        // and return it as randomIntLowerToUpper
+        randomIntLowertoUpper = random.nextInt(upper - lower + 1) + lower;
         return randomIntLowertoUpper;
     }
 

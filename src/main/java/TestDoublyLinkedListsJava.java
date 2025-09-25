@@ -1,7 +1,7 @@
 // FUTURE: create a Portfolio class and include functionality of the below
 
+import org.desu.linkedlistbook.DoublyLinkedList;
 import org.desu.portfolio.PortfolioHolding;
-import java.util.LinkedList;
 
 public class TestDoublyLinkedListsJava {
     // Write this class with parallel functionality to
@@ -22,15 +22,13 @@ public class TestDoublyLinkedListsJava {
         PortfolioHolding item5 = new PortfolioHolding("MSFT", 4.0, 503.51);
 
         // TODO: create the linked list, call it myDoublyLinkedList
+        DoublyLinkedList<PortfolioHolding> myDoublyLinkedList = new DoublyLinkedList<>();
         // Use Java Linked List from collections
-
 
         // TODO: uncomment the below code after the item above
         // is worked
 
-        /*
-
-        // First add item1 then add item2
+        //First add item1 then add item2
         myDoublyLinkedList.addFirst(item1);
         myDoublyLinkedList.addFirst(item2);
         // Next add item3, item4, and item5 to the back
@@ -42,14 +40,14 @@ public class TestDoublyLinkedListsJava {
         // Don't remove it
         // Call the variable firstItem
         // This time uses getFirst
-        PortfolioHolding firstItem = myDoublyLinkedList.getFirst();
+        PortfolioHolding firstItem = myDoublyLinkedList.first();
         String firstItemString = firstItem.toString();
         System.out.println("First: ");
         System.out.println(firstItemString);
         // Now get the last element in the list
         // It won't be removed
         // This time uses getLast
-        PortfolioHolding lastItem = myDoublyLinkedList.getLast();
+        PortfolioHolding lastItem = myDoublyLinkedList.last();
         // Convert it to a string
         String lastItemString = lastItem.toString();
         System.out.println("Last: ");
@@ -70,7 +68,7 @@ public class TestDoublyLinkedListsJava {
         // Using removeLast from the DoublyLinkedList interface
         // Instead of removeFirst
 
-        */
+
 
         return returnString;
     }
