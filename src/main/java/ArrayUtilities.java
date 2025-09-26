@@ -11,7 +11,9 @@ public class ArrayUtilities {
     public static int[] genSortedArrayOfint(int inputsize) {
         int[] thisIntArray = new int[inputsize];
         // TODO: Fill the array with thisIntArray[i] = i
-
+        for (int i = 0; i < inputsize; i++){
+            thisIntArray[i] = i;
+        }
         return thisIntArray;
     }
 
@@ -21,6 +23,7 @@ public class ArrayUtilities {
     public static int[] genUnsortedArrayOfint(int inputsize, Random rnd) {
         int[] arrayOfInt = genSortedArrayOfint(inputsize);
         // TODO: Shuffle the arrayOfInt that we know is already sorted
+        shuffleFisherYates(arrayOfInt, rnd);
         // Use shuffleFisherYates or shuffleintArrayNativeJava
         // If you use shuffleintArrayNativeJava must complete
         // that To-Do first
@@ -38,6 +41,11 @@ public class ArrayUtilities {
     public static int[][] generateSequentialIntArrays(int numarrays, int size) {
         int[][] array = new int[numarrays][size];
         // TODO: Add code to fill the arrays with the appropriate values
+        for(int i = 0; i < numarrays; i++){
+            for(int j = 0; j < size; j++){
+                array[i][j] = i * size +j;
+            }
+        }
         // Read above
         return array;
     }
@@ -87,6 +95,8 @@ public class ArrayUtilities {
         List<Integer> intList = Arrays.asList(boxedArray);
         // Shuffle the list
         // TODO: Collections.shuffle here - don't overthink
+        Collections.shuffle(intList, rnd);
+
         // Don't forget this requires the random number variable
 
         // Convert back to an array of Integer objects
